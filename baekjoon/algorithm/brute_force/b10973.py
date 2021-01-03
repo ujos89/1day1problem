@@ -1,13 +1,13 @@
 N = int(input())
 arr = list(map(int, input().split()))
 
-if arr == list(reversed(range(1,N+1))):
+if arr == list(range(1,N+1)):
     print(-1)
 else:
     before_num = 0
     for idx, num in enumerate(reversed(arr)):
         if before_num:
-            if before_num > num:
+            if before_num < num:
                 pos = N - idx - 1
                 break
         before_num = num
