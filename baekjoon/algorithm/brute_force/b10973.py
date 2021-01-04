@@ -18,10 +18,10 @@ else:
     #print(pos)
     #print(tmp1)
     answer = arr[:pos]
-    answer.append(tmp1[tmp1.index(arr[pos])+1])
+    answer.append(tmp1[tmp1.index(arr[pos])-1])
     for _ in answer:
         if _ in tmp:
             tmp.remove(_)
-    tmp.sort()
+    tmp.sort(reverse=True)
     answer.extend(tmp)
     print(*answer)
